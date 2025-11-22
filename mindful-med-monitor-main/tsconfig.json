@@ -1,0 +1,19 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": "src", // <--- THIS IS CRUCIAL: It tells the compiler to look inside the 'src' directory for non-relative imports
+    "paths": {
+      "@/*": ["*"]   // <--- THIS IS CRITICAL: It maps any import starting with '@/` to paths directly under 'baseUrl' (i.e., 'src/')
+    },
+    "noImplicitAny": false,
+    "noUnusedParameters": false,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noUnusedLocals": false,
+    "strictNullChecks": false
+  }
+}
